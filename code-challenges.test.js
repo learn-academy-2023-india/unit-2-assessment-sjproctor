@@ -14,14 +14,31 @@
 
 // a) Create a test with expect statements for each of the variables provided.
 
-const numbersArray1 = [6, 7, 8, 9, 10]
-// Expected output: [18, 21, 24, 27, 30]
-const numbersArray2 = [24, 27, 30, 33, 36]
-// Expected output: [72, 81, 90, 99, 108]
+describe("multiplyByThree", () => {
+  it("is a function that takes in an array of numbers and returns an array with all the numbers multiplied by 3", () => {
+    const numbersArray1 = [6, 7, 8, 9, 10]
+    // Expected output: [18, 21, 24, 27, 30]
+    const numbersArray2 = [24, 27, 30, 33, 36]
+    // Expected output: [72, 81, 90, 99, 108]
+    expect(multiplyByThree(numbersArray1)).toEqual([18, 21, 24, 27, 30])
+    expect(multiplyByThree(numbersArray2)).toEqual([72, 81, 90, 99, 108])
+  })
+})
 
 // b) Create the function that makes the test pass.
 
 // Pseudo code:
+// input: single array of numbers
+// output: array with the numbers mult by 3
+// do something to every item in the array - map
+// value * 3
+
+const multiplyByThree = (array) => {
+  return array.map((value) => {
+    return value * 3
+  })
+}
+// passes the test!
 
 // --------------------1) Create a function that takes a object as an argument and decides if the number inside it is evenly divisible by three or not.
 
